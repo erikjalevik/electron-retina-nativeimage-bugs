@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Retina image test</title>
+    <style>
+      .col {
+        display: flex;
+        flex-direction: column
+      }
+      .icon {
+        height: 16px;
+        width: 16px;
+        flex-grow: 0;
+        flex-shrink: 0;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h3>PNGs loaded from disk</h3>
+    <div class="col">
+      <span>
+        <img id="folder" class="icon" src="" />
+        Adaptive image
+      </span>
+      <span>
+        <img id="folder1x" class="icon" src="" />
+        Hardcoded 1x
+      </span>
+      <span>
+        <img id="folder2x" class="icon" src="" />
+        Hardcoded 2x
+      </span>
+    </div>
+
+    <h3>app.GetFileIcon</h3>
+    <div class="col">
+      <span>
+        <img id="file" class="icon" src="" />
+        Adaptive image
+      </span>
+      <span>
+        <img id="file1x" class="icon" src="" />
+        Hardcoded 1x
+      </span>
+      <span>
+        <img id="file2x" class="icon" src="" />
+        Hardcoded 2x
+      </span>
+    </div>
+
+    <h3>nativeImage.createFromNamedImage</h3>
+    <div class="col">
+      <span>
+        <img id="named" class="icon" src="" />
+        NSImageNameFolder
+      </span>
+    </div>
+
+    <script>
+      require('./renderer.js')
+    </script>
+  </body>
+</html>
